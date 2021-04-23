@@ -1,0 +1,19 @@
+.form {
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+}
+
+.label {
+  margin-bottom: 20px;
+}
+
+.input {
+  margin-top: 5px;
+}
+
+.button {
+  width: 100px;
+}
