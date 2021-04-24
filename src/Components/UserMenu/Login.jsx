@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../../reducer/auth/operations';
-import PhonebookPage from '../Phonebook/PhonebookPage/PhonebookPage';
+// import PhonebookPage from '../Phonebook/PhonebookPage/PhonebookPage';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -88,7 +88,7 @@ export default function Login() {
           </Button>
         </form>
       </div>
-      <PhonebookPage />
+      {/* <PhonebookPage /> */}
     </>
   );
 }
