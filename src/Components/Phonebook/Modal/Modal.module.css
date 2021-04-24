@@ -1,0 +1,7 @@
+.modal_container .list_item {
+  width: 200px;
+}
+
+.list_item .avatar {
+  background-color: green;
+}

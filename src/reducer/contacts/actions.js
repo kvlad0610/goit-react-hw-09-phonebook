@@ -17,3 +17,5 @@ export const successDeleteContactsAction = createAction(
   'contacts/delete/success',
 );
 export const errorDeleteContactsAction = createAction('contacts/delete/error');
+
+export const modalAction = createAction('contact/modal');

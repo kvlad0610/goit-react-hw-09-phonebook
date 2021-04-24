@@ -5,10 +5,11 @@ import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import { modalAction } from '../../../reducer/contacts/actions';
 
 import { form, button } from './ContactForm.module.css';
 
-export default function ContactForm() {
+export default function ContactForm({ onClose }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -39,6 +40,7 @@ export default function ContactForm() {
     addCont();
     setName('');
     setNumber('');
+    dispatch(modalAction(false));
   }
 
   const useStyles = makeStyles(theme => ({

@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../../reducer/auth/operations';
+import PhonebookPage from '../Phonebook/PhonebookPage/PhonebookPage';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -49,42 +50,45 @@ export default function Login() {
 
   const classes = useStyles();
   return (
-    <div>
-      <form
-        className={classes.root}
-        noValidate
-        autoComplete="off"
-        onSubmit={handleSubmit}
-      >
-        <TextField
-          id="standard-basic"
-          label="Email"
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-        />
-        <br />
-        <TextField
-          id="standard-basic"
-          label="Password"
-          type="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-        />
-        <br />
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          size="small"
-          className={classes.button}
-          startIcon={<SaveIcon />}
+    <>
+      <div>
+        <form
+          className={classes.root}
+          noValidate
+          autoComplete="off"
+          onSubmit={handleSubmit}
         >
-          Login
-        </Button>
-      </form>
-    </div>
+          <TextField
+            id="standard-basic"
+            label="Email"
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
+          <br />
+          <TextField
+            id="standard-basic"
+            label="Password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
+          <br />
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            size="small"
+            className={classes.button}
+            startIcon={<SaveIcon />}
+          >
+            Login
+          </Button>
+        </form>
+      </div>
+      <PhonebookPage />
+    </>
   );
 }

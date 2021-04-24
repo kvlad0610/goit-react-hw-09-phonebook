@@ -5,6 +5,7 @@ const initialState = {
   contacts: [],
   filters: '',
   isLoading: false,
+  modal: false,
 };
 
 const getContacts = (_, actions) => actions.payload;
@@ -35,8 +36,13 @@ const isLoading = createReducer(initialState.isLoading, {
   [actions.errorDeleteContactsAction]: () => false,
 });
 
+const modal = createReducer(initialState.modal, {
+  [actions.modalAction]: (_, { payload }) => payload,
+});
+
 export default combineReducers({
   contacts,
   filters,
   isLoading,
+  modal,
 });
